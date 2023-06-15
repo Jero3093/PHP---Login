@@ -1,0 +1,3 @@
+CREATE DATABASE register-php;
+
+CREATE TABLE signup (id INT(11) AUTO_INCREMENT, email VARCHAR(35), password VARCHAR(50));
