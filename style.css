@@ -70,6 +70,7 @@ body {
     border-bottom: 1px solid gray;
     outline: none;
     font-size: 17px;
+    color: white;
 }
 
 .label {
@@ -79,7 +80,7 @@ body {
 
 .submit {
     color: purple;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 600;
     background-color: transparent;
     padding: 10px 30px 10px 30px;
@@ -92,6 +93,45 @@ body {
 .submit:hover {
     transform: scale(1.1);
     transition: 0.2s ease-in-out;
+}
+
+/*=============
+    Header
+=============*/
+
+.header {
+    width: 100vw;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header_icon {
+    width: 120px;
+    height: 90px;
+    filter: drop-shadow(0 0 3px purple);
+    transition: 0.2s ease-in-out;
+}
+
+.header_icon:hover {
+    transition: 0.2s ease-in-out;
+    filter: drop-shadow(0 0 6px purple);
+}
+
+.header_list {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.header_list-item {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
 }
 
 /*=================

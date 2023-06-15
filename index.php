@@ -17,17 +17,20 @@
 
             <div class="input_container">
                 <label for="email" class="label">Email:</label>
-                <input type="email" name="email" id="email" class="input" required placeholder="Write your email address">
+                <input type="email" name="email" id="email" class="input" required placeholder="Write your email address" autocomplete="off">
             </div>
 
             <div class="input_container">
                 <label for="password" class="label">Password:</label>
-                <input type="password" name="password" id="password" class="input" required placeholder="Write your password">
+                <input type="password" name="password" id="password" class="input" required placeholder="Write your password" autocomplete="off">
             </div>
 
-            <input type="submit" value="Entrar" class="submit">
+            <input type="submit" value="Log In" class="submit">
         </form>
     </div>
+
+    <!--JS-->
+    <script src="./../Login//js/main.js"></script>
 </body>
 
 </html>
