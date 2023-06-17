@@ -1,19 +1,32 @@
 <?php
-include("../database/database.php");
+include("../database/database.php"); //MYSQL Database
 
-$email = $_POST["email"];
-$password = $_POST["password"];
+$name = $_POST['name']; //Name
+$email = $_POST["email"]; //Email
+$password = $_POST["password"]; //Password
 
-if (empty($email) || empty($password)) {
+if (empty($name) || empty($email) || empty($password)) {
     echo 'Rellena el formulario para continuar';
 } else {
-    $queryregister = "INSERT INTO signup (email, password) VALUES ('$email', '$password')";
+    $queryregister = "INSERT INTO signup (name, email, password) VALUES ('$name', '$email', '$password')"; //Insert New User Query
 
-    $insertar = mysqli_query($conexion, $queryregister);
+    $queryConsultaUsuario = "SELECT * FROM signup WHERE email = '$email'"; //Check Email Address if already exists 
 
-    echo 'Datos cargados';
+    $comprobarUsuario = mysqli_query($conexion, $queryConsultaUsuario); //Check Email
 
-    header('location: ./../pages/home.php');
+    $datosUsuario = mysqli_fetch_array($comprobarUsuario); //Check Email Data
 
-    mysqli_close($conexion);
+    if ($datosUsuario['email'] == $email) {
+        echo 'This email address is already in use. Please re-enter your email address and try again.';
+    } else {
+        $insertar = mysqli_query($conexion, $queryregister); //User Insert Data
+
+        echo 'Datos cargados y registrados';
+
+        header('location: ./../pages/home.php'); //Redirect to home page when the user is correct
+    }
+
+
+
+    mysqli_close($conexion); //Close the connection to the server
 }
