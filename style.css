@@ -21,10 +21,29 @@ body {
     align-items: center;
 }
 
-.form {
+.form-active {
     display: flex;
+}
+
+.form-inactive {
+    display: none;
+}
+
+.form-register {
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 10px;
+    box-shadow: 0 0 10px purple;
+    align-items: center;
+    border-radius: 10px;
+    width: 350px;
+    height: 590px;
+    justify-content: center;
+    animation: form 1s linear infinite;
+}
+
+.form-login {
+    flex-direction: column;
+    row-gap: 10px;
     box-shadow: 0 0 10px purple;
     align-items: center;
     border-radius: 10px;
@@ -83,16 +102,27 @@ body {
     font-size: 30px;
     font-weight: 600;
     background-color: transparent;
-    padding: 10px 30px 10px 30px;
     border: none;
     outline: none;
     cursor: pointer;
     transition: 0.2s ease-in-out;
+    margin-bottom: 10px;
 }
 
 .submit:hover {
     transform: scale(1.1);
     transition: 0.2s ease-in-out;
+}
+
+.form-switch-text {
+    color: gray;
+    margin-bottom: 15px;
+}
+
+.form-switch-register-btn,
+.form-switch-login-btn {
+    font-weight: 600;
+    cursor: pointer;
 }
 
 /*=============
@@ -132,6 +162,20 @@ body {
     color: white;
     text-decoration: none;
     font-size: 25px;
+}
+
+.header_logout {
+    color: crimson;
+    font-size: 25px;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.2s ease-in-out;
+}
+
+.header_logout:hover {
+    transform: scale(1.09);
+    transition: 0.2s ease-in-out;
+    font-size: 28px;
 }
 
 /*=================
