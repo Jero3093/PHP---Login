@@ -178,6 +178,58 @@ body {
     font-size: 28px;
 }
 
+/*===============
+    Contact
+================*/
+
+.contactsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 30px;
+    margin-top: 50px;
+}
+
+.contactCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 380px;
+    height: 80px;
+    text-decoration: none;
+    padding: 15px;
+}
+
+.contactCard:hover {
+    box-shadow: 0 0 3px purple;
+    border-radius: 10px;
+}
+
+.contactCard__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.contactCard__image {
+    width: 70px;
+    height: 70px;
+}
+
+.contactCard__info--name {
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.contactCard__icon {
+    width: 40px;
+    height: 40px;
+}
+
 /*=================
     Animations 
 =================*/
