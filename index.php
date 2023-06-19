@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+session_start();
+
+if (isset($_SESSION['email'])) {
+    header("location: ./pages/home.php"); // Redirigir a la página de inicio de sesión si no hay sesión activa
+    exit(); // Asegurarse de que el resto del código no se ejecute si se redirige
+}
+?>
 
 <head>
     <meta charset="UTF-8">
@@ -14,7 +22,7 @@
     <main class="container">
         <!--Register Form-->
 
-        <form action="./php/register.php" method="post" class="form-register form-active">
+        <form action="./php/register.php" method="post" class="form-register form-inactive">
             <img src="./../Login/assets/icons/PHP.png" alt="PHP Logo" class="logo">
 
             <div class="input_container">
@@ -39,7 +47,7 @@
 
         <!--Login Form-->
 
-        <form action="./php/login.php" method="post" class="form-login form-inactive">
+        <form action="./php/login.php" method="post" class="form-login form-active">
             <img src="./../Login/assets/icons/PHP.png" alt="PHP Logo" class="logo">
 
             <div class="input_container">

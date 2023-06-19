@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+session_start();
+
+if (!isset($_SESSION['email'])) {
+    header("location: ./../"); // Redirigir a la página de inicio de sesión si no hay sesión activa
+    exit(); // Asegurarse de que el resto del código no se ejecute si se redirige
+}
+?>
 
 <head>
     <meta charset="UTF-8">

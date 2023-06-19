@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("../database/database.php"); //MYSQL Database
 
 $name = $_POST['name']; //Name
@@ -19,6 +20,7 @@ if (empty($name) || empty($email) || empty($password)) {
     if ($datosUsuario['email'] == $email) {
         echo 'This email address is already in use. Please re-enter your email address and try again.';
     } else {
+        $_SESSION["email"] = $email; //Save Email in Session Variable
         $insertar = mysqli_query($conexion, $queryregister); //User Insert Data
 
         echo 'Datos cargados y registrados';

@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("../database/database.php");
 
 $email = $_POST['email'];
@@ -12,9 +13,10 @@ if (empty($email) || empty($password)) {
     $resultadoConsulta = mysqli_query($conexion, $queryConsultaUsuario);
 
     if ($resultadoConsulta && mysqli_num_rows($resultadoConsulta) > 0) {
+        $_SESSION['email'] = $email; // Guardar el correo electrónico en la sesión
         header("location: ./../pages/home.php");
     } else {
-        echo 'User does not exist or incorrect password';
+        echo 'User does not exist or incorrect password, please try again';
     }
 
     mysqli_close($conexion);
