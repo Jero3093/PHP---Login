@@ -178,6 +178,52 @@ body {
     font-size: 28px;
 }
 
+/*====================
+    Home Content
+====================*/
+
+.content_grid {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 30px;
+    row-gap: 30px;
+}
+
+.card_content {
+    width: 330px;
+    height: 430px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px purple;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 10px;
+    overflow: hidden;
+    transition: 0.2s ease-in-out;
+}
+
+.card_content:hover {
+    transform: scale(1.02);
+    transition: 0.2s ease-in-out;
+    box-shadow: 0 0 10px purple;
+}
+
+.card_content-img {
+    width: 310px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px gray;
+    align-self: center;
+    object-fit: cover;
+}
+
+.card_content-text {
+    color: white;
+    font-size: 18px;
+    line-height: 32px;
+}
+
 /*===============
     Contact
 ================*/
@@ -245,5 +291,25 @@ body {
 
     100% {
         box-shadow: 0 0 10px rgb(175, 2, 218);
+    }
+}
+
+/*=======================
+    Responsive Tablet
+=======================*/
+@media screen and (min-width: 768px) {
+    .content_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*=======================
+    Responsive Desktop
+=======================*/
+@media screen and (min-width: 1024px) {
+    .content_grid {
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 20%;
+        margin-right: 20%;
     }
 }

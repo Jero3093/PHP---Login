@@ -22,6 +22,12 @@ if (!isset($_SESSION['email'])) {
     <?php
     include("./../src/components/header.php");
     ?>
+    <main class="content_grid">
+        <?php
+        include("./../php/cargarContenido.php");
+        cargarContenido();
+        ?>
+    </main>
 </body>
 
 </html>
