@@ -29,6 +29,11 @@ if (!isset($_SESSION['email'])) {
         ?>
     </main>
 
+    <a href="./newContent.php" class="AddButton">
+        <div class="line1"></div>
+        <div class="line2"></div>
+    </a>
+
     <!--JS-->
     <script src="./../js/content.js"></script>
 </body>
