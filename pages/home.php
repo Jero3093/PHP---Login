@@ -28,6 +28,9 @@ if (!isset($_SESSION['email'])) {
         cargarContenido();
         ?>
     </main>
+
+    <!--JS-->
+    <script src="./../js/content.js"></script>
 </body>
 
 </html>

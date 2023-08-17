@@ -67,7 +67,7 @@ if (isset($_SESSION['email'])) {
     </main>
 
     <!--JS-->
-    <script src="./../Login/js/main.js"></script>
+    <script src="./../Login/js/login.js"></script>
 </body>
 
 </html>
